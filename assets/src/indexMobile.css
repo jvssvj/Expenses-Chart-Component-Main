@@ -1,0 +1,23 @@
+@media(max-width:410px) {
+    .card_spending {
+        padding: 1em;
+    }
+
+    .card_spending h2 {
+        font-size: 1.4rem;
+    }
+
+    .card_balance_text span {
+        font-size: 1.8rem;
+    }
+
+    .total_month_balance span:nth-child(2) {
+        font-size: 1.8rem;
+    }
+    
+    .box-price {
+        max-width: 42px;
+        font-size: .7rem;
+        margin: -3em 0em 0em 0em;
+    }
+}

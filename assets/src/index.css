@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+:root {
+/* ### Primary */
+--SoftRed: hsl(10, 79%, 65%);
+--Cyan: hsl(186, 34%, 60%);
+
+/* ### Neutral */
+--DarkBrown: hsl(25, 47%, 15%);
+--MediumBrown: hsl(28, 10%, 53%);
+--Cream: hsl(27, 66%, 92%);
+--VeryPaleOrange: hsl(33, 100%, 98%);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--Cream);
+    font-size: 1.125rem; /*18px*/
+    margin: 0em 1em;
+}
+
+.card_balance {
+    background-color: var(--SoftRed);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5em;
+    margin-top: .2em;
+}
+
+.card_balance_text h1 {
+    font-size: .9rem;
+    font-weight: 400;
+    margin-bottom: .3em;
+}
+
+.card_balance_text span {
+    font-size: 2rem;
+}
+
+.card_balance_text h1,
+.card_balance_text span {
+    color: var(--VeryPaleOrange);
+}
+
+span {
+    display: block;
+}
+
+.card_balance,
+.card_spending,
+.week {
+    width: 100%;
+    max-width: 450px;
+    border-radius: .9rem;
+}
+
+.card_spending {
+    background-color: var(--VeryPaleOrange);
+    margin-top: 1em;
+    padding: 2em;
+}
+
+.card_spending h2 {
+    color: var(--DarkBrown);
+    font-size: 1.7rem;
+}
+
+.week {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-top: 3em;
+    gap: .2em;
+}
+
+.mon,
+.tue,
+.wed,
+.thu,
+.fri,
+.sat,
+.sun {
+    width: 100%;
+    max-width: 42px;
+    text-align: center;
+    color: var(--MediumBrown);
+    
+}
+
+.mon-graphic,
+.tue-graphic,
+.thu-graphic,
+.fri-graphic,
+.sat-graphic,
+.sun-graphic {
+    background-color: var(--SoftRed);
+    border-radius: .3rem;
+    margin-bottom: .5em;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.mon-graphic:hover,
+.tue-graphic:hover,
+.thu-graphic:hover,
+.fri-graphic:hover,
+.sat-graphic:hover,
+.sun-graphic:hover {
+    background-color :hsla(10, 79%, 65%, 0.637);
+}
+
+.mon-graphic {
+    height: 45px;
+}
+
+.tue-graphic {
+    height: 90px;
+}
+
+.wed-graphic {
+    background-color: var(--Cyan);
+    height: 135px;
+    border-radius: .3rem;
+    margin-bottom: .5em;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.wed-graphic:hover {
+    background-color: hsla(186, 34%, 60%, 0.637)
+}
+
+.thu-graphic {
+    height: 80px;
+}
+
+.fri-graphic {
+    height: 60px;
+}
+
+.sat-graphic {
+    height: 110px;
+}
+
+.sun-graphic {
+    height: 70px;
+}
+
+.line {
+    width: 100%;
+    height: .1rem;
+    background-color: var(--Cream);
+    margin: 1.5em 0em;
+}
+
+.total_month {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
+.total_month_balance span:nth-child(1) {
+    color: var(--MediumBrown);
+}
+
+.total_month_balance span:nth-child(2) {
+    font-size: 2.5rem;
+    color: var(--DarkBrown);
+}
+
+.total_month_porcentage {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    text-align: end;
+}
+
+.total_month_porcentage span:nth-child(1) {
+    color: var(--DarkBrown);
+}
+
+.total_month_porcentage span:nth-child(2) {
+    color: var(--MediumBrown);
+}
+
+.card_balance_text span,
+.total_month_porcentage span:nth-child(1),
+.total_month_balance span:nth-child(2) {
+    font-weight: 700;
+}
+
+.total_month_balance span:nth-child(1),
+.card_balance_text h1,
+.mon,
+.tue,
+.wed,
+.thu,
+.fri,
+.sat,
+.sun,
+.total_month_porcentage span:nth-child(1),
+.total_month_porcentage span:nth-child(2) {
+    font-size: .9rem;
+}
+
+.box-price {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    max-width: 53px;
+    height: 30px;
+    margin: -2.5em 0em 0em -.25em;
+    background-color: var(--DarkBrown);
+    border-radius: .3rem;
+    font-weight: 700;
+    color: white;
+}
+
+.attribution {
+    position: absolute;
+    text-align: center;
+    margin-top: 63em;
+    font-size: .9rem;
+    color: var(--DarkBrown);
+    padding: .3rem;
+}
+
+.attribution a {
+    color: var(--SoftRed);
+    font-weight: 700;
+}
